@@ -81,7 +81,7 @@
                 <div class="col-lg-11">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <i class="fa fa-bar-chart-o fa-fw"></i> Registered Users
+                            <i class="fa fa-file"></i> Files
                             <table class="table">
                               <thead class="thead-dark">
                                 <tr>
@@ -147,6 +147,11 @@
                                           <td>{{$user->name}}</td>
                                           <td>{{$user->email}}</td>
                                           <td>{{$user->pakeage}}</td>
+
+
+
+
+                                            </td>
                                             <td><a  href="/profile/{{$user->id}}" name="button">Profile</a></td>
                                         </tr>
             @endforeach

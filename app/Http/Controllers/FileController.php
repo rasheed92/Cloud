@@ -66,14 +66,15 @@ return view('layouts.profile',compact('user','storge','a','b','c','x','y','limit
   }
   public function stor(Request $request)
   {
-    // $validator = Validator::make($request->all(),[  #Validator to add item
-    //     'name'=>'required',
-    //     'body'=>'required',
-    //     'user_id'=>'required',
-    //     'file'=>'required|image',
-    // ]);
-    // if($validator->fails())
-    //     return back()->withErrors($validator->errors())->withInput();
+    $validator = Validator::make($request->all(),[  #Validator to add item
+        'name'=>'required',
+        'body'=>'required',
+        'user_id'=>'required',
+        'size'=>'required',
+        'file'=>'required|image','file',
+    ]);
+    if($validator->fails())
+        return back()->withErrors($validator->errors())->withInput();
 
     $files = new file;
 
